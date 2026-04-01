@@ -1,339 +1,364 @@
 <!DOCTYPE html>
-
-<html class="scroll-smooth" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>ChouChou Tea - Grand Opening</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "on-tertiary": "#fff2d4",
-              "surface-bright": "#f8f6f1",
-              "tertiary-container": "#fdd34d",
-              "tertiary": "#705900",
-              "on-primary": "#ffeff0",
-              "primary-container": "#feaeba",
-              "primary": "#874954",
-              "on-error-container": "#570008",
-              "secondary-container": "#c9edaf",
-              "on-surface-variant": "#5c5c58",
-              "secondary-fixed-dim": "#bbdfa2",
-              "surface": "#f8f6f1",
-              "on-primary-fixed": "#4b1924",
-              "on-primary-container": "#642d38",
-              "on-tertiary-fixed": "#463600",
-              "on-secondary-container": "#3b5a2a",
-              "tertiary-fixed": "#fdd34d",
-              "on-primary-fixed-variant": "#6f3540",
-              "inverse-on-surface": "#9e9d99",
-              "secondary": "#456432",
-              "primary-dim": "#793e49",
-              "error": "#b31b25",
-              "error-container": "#fb5151",
-              "on-surface": "#2e2f2c",
-              "primary-fixed": "#feaeba",
-              "tertiary-fixed-dim": "#eec540",
-              "secondary-dim": "#395728",
-              "on-tertiary-fixed-variant": "#675200",
-              "surface-container": "#eae8e3",
-              "on-secondary-fixed-variant": "#456432",
-              "outline-variant": "#aeada9",
-              "error-dim": "#9f0519",
-              "surface-container-high": "#e4e2dd",
-              "on-background": "#2e2f2c",
-              "on-error": "#ffefee",
-              "tertiary-dim": "#624d00",
-              "surface-tint": "#874954",
-              "background": "#f8f6f1",
-              "on-secondary-fixed": "#2a4719",
-              "on-secondary": "#d9febe",
-              "inverse-primary": "#feaeba",
-              "surface-variant": "#deddd7",
-              "inverse-surface": "#0e0e0c",
-              "surface-dim": "#d5d5ce",
-              "primary-fixed-dim": "#eea1ad",
-              "on-tertiary-container": "#5c4900",
-              "outline": "#777773",
-              "secondary-fixed": "#c9edaf",
-              "surface-container-highest": "#deddd7",
-              "surface-container-lowest": "#ffffff",
-              "surface-container-low": "#f2f1eb",
-              "soft-pink": "#FCE4EC",
-              "pale-green": "#DCEDC8"
-            },
-            fontFamily: {
-              "headline": ["Plus Jakarta Sans"],
-              "body": ["Be Vietnam Pro"],
-              "label": ["Plus Jakarta Sans"]
-            },
-            borderRadius: {"DEFAULT": "0.75rem", "lg": "0.75rem", "xl": "0.75rem", "full": "9999px", "3xl": "0.75rem", "4xl": "0.75rem"},
-          },
-        },
-      }
-    </script>
-<style>
-      .material-symbols-outlined {
-        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-      }
-      .kawaii-shadow {
-        box-shadow: 0 10px 40px rgba(135, 73, 84, 0.08);
-      }
-      .glass-morphism {
-        background: rgba(255, 255, 255, 0.7);
-        backdrop-filter: blur(20px);
-      }
-      .floating {
-        animation: floating 3s ease-in-out infinite;
-      }
-      @keyframes floating {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-10px); }
-      }
-      .floating-gentle {
-        animation: floating-gentle 5s ease-in-out infinite;
-      }
-      @keyframes floating-gentle {
-        0%, 100% { transform: translateY(0) rotate(0deg); }
-        50% { transform: translateY(-15px) rotate(5deg); }
-      }
-      .music-note {
-        animation: float-note 4s ease-in-out infinite;
-        opacity: 0.6;
-      }
-      @keyframes float-note {
-        0%, 100% { transform: translate(0, 0) rotate(0deg); }
-        50% { transform: translate(10px, -20px) rotate(10deg); }
-      }
-    </style>
-</head>
-<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden">
-<!-- TopNavBar -->
-<nav class="bg-[#f8f6f1]/80 dark:bg-stone-900/80 backdrop-blur-xl docked full-width top-0 sticky z-50 shadow-[0_10px_40px_rgba(135,73,84,0.08)]">
-<div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
-<div class="text-2xl font-black tracking-tighter text-[#874954] dark:text-[#f4a6b2] font-headline">
-                ChouChou Tea
+<html class="scroll-smooth" lang="en">
+   <head>
+      <meta charset="utf-8"/>
+      <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+      <title>ChouChou Tea - Grand Opening</title>
+      <link href="https://fonts.googleapis.com" rel="preconnect"/>
+      <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+      <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+      <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+      <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+      <script id="tailwind-config">
+         tailwind.config = {
+           darkMode: "class",
+           theme: {
+             extend: {
+               colors: {
+                 "on-tertiary": "#fff2d4",
+                 "surface-bright": "#f8f6f1",
+                 "tertiary-container": "#fdd34d",
+                 "tertiary": "#705900",
+                 "on-primary": "#ffeff0",
+                 "primary-container": "#feaeba",
+                 "primary": "#874954",
+                 "on-error-container": "#570008",
+                 "secondary-container": "#c9edaf",
+                 "on-surface-variant": "#5c5c58",
+                 "secondary-fixed-dim": "#bbdfa2",
+                 "surface": "#f8f6f1",
+                 "on-primary-fixed": "#4b1924",
+                 "on-primary-container": "#642d38",
+                 "on-tertiary-fixed": "#463600",
+                 "on-secondary-container": "#3b5a2a",
+                 "tertiary-fixed": "#fdd34d",
+                 "on-primary-fixed-variant": "#6f3540",
+                 "inverse-on-surface": "#9e9d99",
+                 "secondary": "#456432",
+                 "primary-dim": "#793e49",
+                 "error": "#b31b25",
+                 "error-container": "#fb5151",
+                 "on-surface": "#2e2f2c",
+                 "primary-fixed": "#feaeba",
+                 "tertiary-fixed-dim": "#eec540",
+                 "secondary-dim": "#395728",
+                 "on-tertiary-fixed-variant": "#675200",
+                 "surface-container": "#eae8e3",
+                 "on-secondary-fixed-variant": "#456432",
+                 "outline-variant": "#aeada9",
+                 "error-dim": "#9f0519",
+                 "surface-container-high": "#e4e2dd",
+                 "on-background": "#2e2f2c",
+                 "on-error": "#ffefee",
+                 "tertiary-dim": "#624d00",
+                 "surface-tint": "#874954",
+                 "background": "#f8f6f1",
+                 "on-secondary-fixed": "#2a4719",
+                 "on-secondary": "#d9febe",
+                 "inverse-primary": "#feaeba",
+                 "surface-variant": "#deddd7",
+                 "inverse-surface": "#0e0e0c",
+                 "surface-dim": "#d5d5ce",
+                 "primary-fixed-dim": "#eea1ad",
+                 "on-tertiary-container": "#5c4900",
+                 "outline": "#777773",
+                 "secondary-fixed": "#c9edaf",
+                 "surface-container-highest": "#deddd7",
+                 "surface-container-lowest": "#ffffff",
+                 "surface-container-low": "#f2f1eb",
+                 "soft-pink": "#FCE4EC",
+                 "pale-green": "#DCEDC8"
+               },
+               fontFamily: {
+                 "headline": ["Plus Jakarta Sans"],
+                 "body": ["Be Vietnam Pro"],
+                 "label": ["Plus Jakarta Sans"]
+               },
+               borderRadius: {"DEFAULT": "0.75rem", "lg": "0.75rem", "xl": "0.75rem", "full": "9999px", "3xl": "0.75rem", "4xl": "0.75rem"},
+             },
+           },
+         }
+      </script>
+      <style>
+         .material-symbols-outlined {
+         font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+         }
+         .kawaii-shadow {
+         box-shadow: 0 10px 40px rgba(135, 73, 84, 0.08);
+         }
+         .glass-morphism {
+         background: rgba(255, 255, 255, 0.7);
+         backdrop-filter: blur(20px);
+         }
+         .floating {
+         animation: floating 3s ease-in-out infinite;
+         }
+         @keyframes floating {
+         0%, 100% { transform: translateY(0); }
+         50% { transform: translateY(-10px); }
+         }
+         .floating-gentle {
+         animation: floating-gentle 5s ease-in-out infinite;
+         }
+         @keyframes floating-gentle {
+         0%, 100% { transform: translateY(0) rotate(0deg); }
+         50% { transform: translateY(-15px) rotate(5deg); }
+         }
+         .music-note {
+         animation: float-note 4s ease-in-out infinite;
+         opacity: 0.6;
+         }
+         @keyframes float-note {
+         0%, 100% { transform: translate(0, 0) rotate(0deg); }
+         50% { transform: translate(10px, -20px) rotate(10deg); }
+         }
+      </style>
+   </head>
+   <body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden">
+      <!-- TopNavBar -->
+      <nav class="bg-[#f8f6f1]/80 dark:bg-stone-900/80 backdrop-blur-xl docked full-width top-0 sticky z-50 shadow-[0_10px_40px_rgba(135,73,84,0.08)]">
+         <div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
+            <div class="text-2xl font-black tracking-tighter text-[#874954] dark:text-[#f4a6b2] font-headline">
+               ChouChou Tea
             </div>
-<div class="hidden md:flex items-center gap-8">
-<a class="font-headline font-bold text-lg text-[#874954] dark:text-[#f4a6b2] border-b-4 border-[#874954] rounded-full px-2 hover:scale-105 hover:text-[#456432] transition-transform duration-300" href="#">Opening Soon</a>
-<a class="font-headline font-bold text-lg text-[#874954]/60 dark:text-[#f4a6b2]/60 hover:scale-105 hover:text-[#456432] transition-transform duration-300" href="#gifts">Gifts</a>
-<a class="font-headline font-bold text-lg text-[#874954]/60 dark:text-[#f4a6b2]/60 hover:scale-105 hover:text-[#456432] transition-transform duration-300" href="#">Location</a>
-</div>
-<div class="flex items-center gap-4">
-<button class="text-[#874954] scale-95 duration-200 ease-out hover:scale-105 p-2 rounded-full hover:bg-primary/5">
-<span class="material-symbols-outlined" data-icon="chat">chat</span>
-</button>
-<button class="text-[#874954] scale-95 duration-200 ease-out hover:scale-105 p-2 rounded-full hover:bg-primary/5">
-<span class="material-symbols-outlined" data-icon="share">share</span>
-</button>
-</div>
-</div>
-</nav>
-<!-- Hero Section -->
-<header class="relative min-h-[850px] flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-[#e3f2fd] to-[#ffffff]">
-<!-- Sky & Background Elements -->
-<div class="absolute inset-0 z-0">
-<!-- Floating 3D Flowers -->
-<img alt="Flower" class="absolute top-[10%] left-[5%] w-24 h-24 floating opacity-80" src="https://lh3.googleusercontent.com/aida/ADBb0uiOkFKbjN2IJnlUaWkdNbs3whu08J1eUR4Z9uwYu-Dtac7wa-1_HLa3ttrEcK1tLUJy-1LUPk6xcM8GcNVHnmvB6JCE32FpP-uffkQh2OUwEBEqypuGd3fZxZnzhQz6j6Zx5NIOCD5LBbiYxZjkB6V6oWwGlJ8n6j20t-3llaRVUEFgxJ_NczEMvdRTRaza0Aq5jp4upP49Ykeei1VqW89G4EBeX9bmD-IF8VALjxVAnZAI14RpqIYM8xM_mo5QdhmRYYmICxdnHpU"/>
-<img alt="Flower" class="absolute top-[20%] right-[10%] w-32 h-32 floating opacity-90" src="https://lh3.googleusercontent.com/aida/ADBb0uiOkFKbjN2IJnlUaWkdNbs3whu08J1eUR4Z9uwYu-Dtac7wa-1_HLa3ttrEcK1tLUJy-1LUPk6xcM8GcNVHnmvB6JCE32FpP-uffkQh2OUwEBEqypuGd3fZxZnzhQz6j6Zx5NIOCD5LBbiYxZjkB6V6oWwGlJ8n6j20t-3llaRVUEFgxJ_NczEMvdRTRaza0Aq5jp4upP49Ykeei1VqW89G4EBeX9bmD-IF8VALjxVAnZAI14RpqIYM8xM_mo5QdhmRYYmICxdnHpU" style="animation-delay: 1s;"/>
-<span class="material-symbols-outlined absolute top-[15%] left-[15%] text-4xl text-secondary music-note" data-icon="music_note">music_note</span>
-<span class="material-symbols-outlined absolute top-[30%] right-[25%] text-5xl text-primary music-note" data-icon="music_note" style="animation-delay: 1.5s;">music_note</span>
-<span class="material-symbols-outlined absolute top-[10%] right-[40%] text-3xl text-secondary music-note" data-icon="music_note" style="animation-delay: 0.8s;">music_note</span>
-<span class="material-symbols-outlined absolute bottom-[20%] left-[40%] text-4xl text-primary music-note" data-icon="music_note" style="animation-delay: 2.2s;">music_note</span>
-<span class="material-symbols-outlined absolute top-[40%] left-[5%] text-2xl text-secondary music-note" data-icon="music_note" style="animation-delay: 3s;">music_note</span>
-<!-- Rolling Hills -->
-<div class="absolute bottom-0 w-full h-[30%] bg-pale-green/40 rounded-[100%_100%_0_0] translate-y-1/2 scale-150"></div>
-<div class="absolute bottom-0 w-full h-[20%] bg-pale-green/60 rounded-[100%_100%_0_0] translate-y-1/4 scale-125"></div>
-</div>
-<!-- Main Hero Content -->
-<div class="relative z-10 max-w-7xl mx-auto px-6 w-full flex flex-col lg:flex-row items-center justify-between pt-12 pb-24">
-<div class="w-full lg:w-1/2 flex justify-center lg:justify-start mb-12 lg:mb-0">
-<div class="relative w-72 md:w-[520px] lg:w-[520px] floating">
-<img alt="Mascot 07" class="w-full h-auto drop-shadow-2xl" src="https://lh3.googleusercontent.com/aida/ADBb0uiUW3mPXiO8EmHTD-A7wBGwijAUdpKZbucJaNKooMWlUvm57iwHlYsQeYt-n3myF2eKBJ3tzLp1O_IKcCDuymnCQY0nh-hbKMrAB1cdowRCmbqVPHZllufgs19ARaDGmxxvY3isd31SQBwatw3A9AytKQCuAwLn4rQsHhoSrYMWnOy7E9pYJrZ9zzA3ktbTHK-TMkxUybsd-W2kSc2mi6i9y-4Lg7D8gJhvtgCLkwT_ooYqMZAoxTbJvKwazipKJlW27htI1zjAxD8"/>
-</div>
-</div>
-<div class="w-full lg:w-1/2 flex flex-col items-center lg:items-end gap-8">
-<div class="w-full max-w-2xl">
-<img alt="Grand Opening Title" class="w-full h-auto drop-shadow-lg" src="https://lh3.googleusercontent.com/aida/ADBb0uizsnx9jA9RHhJH6duHMg937nhYAefAAeVZkFXD5bIpHRDrLW272xb38qMxBrzoF7SCklLA8jV_LdNySLFA0Zf7_URZtSBneoFW8Z0atprbTRP_OnPSeKa26twYBnRghCNSwOQi3PsxkZWVA11Uag1aWf6yF3OdKeNjE6-hU0vaWaGrDSYIPKs3hThNOiibSAyJqFLat72gEu6udKzBSr--IJlPQ-1jTBlHfkYr5UH_XR6GYFHx_BDbqBPm-yXcA80_6HNLvBgAX04"/>
-</div>
-<div class="flex flex-col gap-6 w-full max-w-md">
-<!-- Grand Opening Bubble -->
-<div class="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-xl border-4 border-primary/20 flex flex-col items-center transform rotate-2 hover:rotate-0 transition-transform">
-<h3 class="text-primary font-headline font-extrabold text-xl">APR 25-26 (SAT - SUN)</h3>
-<p class="text-on-surface-variant font-bold">11 AM - 9:30 PM</p>
-<div class="mt-2 bg-primary/10 px-6 py-2 rounded-full">
-<span class="text-primary font-black text-3xl italic">25% OFF</span>
-<span class="text-primary font-bold ml-1">ALL DRINKS</span>
-</div>
-</div>
-<!-- Soft Opening Bubble -->
-<div class="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-xl border-4 border-secondary/20 flex flex-col items-center transform -rotate-1 hover:rotate-0 transition-transform">
-<h3 class="text-secondary font-headline font-extrabold text-xl">SOFT OPENING: APR 17-19</h3>
-<div class="mt-2 bg-secondary/10 px-6 py-2 rounded-full">
-<span class="text-secondary font-black text-2xl italic">20% OFF</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Integrated Countdown Timer -->
-<div class="relative z-20 -mb-24 w-full max-w-4xl px-6">
-<div class="bg-white rounded-xl p-8 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 border-b-8 border-secondary-container">
-<div class="text-center md:text-left">
-<h4 class="font-headline font-bold text-primary text-xl mb-2">Grand Opening Launching In</h4>
-<p class="text-sm text-on-surface-variant">Don't miss the celebration!</p>
-</div>
-<div class="flex gap-4 md:gap-6">
-<div class="text-center">
-<div class="bg-primary/5 w-16 h-16 rounded-xl flex items-center justify-center text-2xl font-black text-primary">24</div>
-<span class="text-[10px] font-bold uppercase tracking-widest opacity-60">Days</span>
-</div>
-<div class="text-center">
-<div class="bg-primary/5 w-16 h-16 rounded-xl flex items-center justify-center text-2xl font-black text-primary">12</div>
-<span class="text-[10px] font-bold uppercase tracking-widest opacity-60">Hrs</span>
-</div>
-<div class="text-center">
-<div class="bg-primary/5 w-16 h-16 rounded-xl flex items-center justify-center text-2xl font-black text-primary">45</div>
-<span class="text-[10px] font-bold uppercase tracking-widest opacity-60">Min</span>
-</div>
-<div class="text-center">
-<div class="bg-primary/5 w-16 h-16 rounded-xl flex items-center justify-center text-2xl font-black text-primary">09</div>
-<span class="text-[10px] font-bold uppercase tracking-widest opacity-60">Sec</span>
-</div>
-</div>
-</div>
-</div>
-</header>
-<!-- Event Details Bento Grid -->
-<section class="pt-40 pb-32 px-6">
-<div class="max-w-7xl mx-auto">
-<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
-<!-- Soft Opening Card -->
-<div class="md:col-span-6 bg-surface-container rounded-xl p-10 flex flex-col gap-6 relative overflow-hidden">
-<div class="absolute -top-4 -right-4 w-32 h-32 bg-secondary/10 rounded-full"></div>
-<span class="bg-secondary text-on-secondary px-4 py-1 rounded-full w-fit font-bold text-sm tracking-widest uppercase">The Preview</span>
-<h3 class="font-headline font-extrabold text-4xl text-on-surface">Soft Opening</h3>
-<div class="space-y-4">
-<div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-primary" data-icon="calendar_month">calendar_month</span>
-<p class="font-semibold text-lg">Apr 17-19 (Fri-Sun)</p>
-</div>
-<div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-primary" data-icon="schedule">schedule</span>
-<p class="font-semibold text-lg">11 AM - 8 PM</p>
-</div>
-<div class="flex items-center gap-4 text-primary">
-<span class="material-symbols-outlined text-primary" data-icon="percent" data-weight="fill">percent</span>
-<p class="font-black text-2xl">20% OFF ALL DRINKS</p>
-</div>
-</div>
-<div class="absolute -bottom-4 -right-4 w-32 h-32 opacity-80">
-<img alt="Excited Mascot 04" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uh42Sv-JPhOw2n8EB7AHndznItGd0Wc2i4AMSntXlup7XPwz4UtXHoSbQlgpdHwW8D00lTNUSZ5eFgmmfLZPthGihgjOdGGbCJ4X2MLHLrces34nCf2pWXcC5CD2cMa4Iu4GPaHhP0r2c4aWpPP97oqBYRoZdq7lePQj8B8r7PgNHOqSxXHo01R25TWcoQwbytGer9l1NhZSl4AD6BMLgcpfAo_GgwgBlTyaGh74lFfB8V8OvUYwjGR-miTXyFwrNgagnrlXk4DYg"/>
-</div>
-</div>
-<!-- Grand Opening Support Card -->
-<div class="md:col-span-6 bg-soft-pink/50 border-4 border-primary/20 rounded-xl p-10 flex flex-col gap-6 relative overflow-hidden kawaii-shadow">
-<div class="absolute -bottom-10 -left-10 w-48 h-48 bg-primary/5 rounded-full"></div>
-<span class="bg-tertiary-container text-on-tertiary-container px-4 py-1 rounded-full w-fit font-bold text-sm tracking-widest uppercase relative z-10">The Celebration</span>
-<h3 class="font-headline font-extrabold text-4xl text-primary relative z-10">Main Event Info</h3>
-<div class="space-y-4 relative z-10">
-<div class="flex items-center gap-4 text-primary">
-<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
-<p class="font-bold text-lg">Apr 25-26 (Sat-Sun)</p>
-</div>
-<div class="flex items-center gap-4 text-primary">
-<span class="material-symbols-outlined" data-icon="alarm">alarm</span>
-<p class="font-bold text-lg">11 AM - 9:30 PM</p>
-</div>
-<div class="flex items-center gap-4 text-secondary">
-<span class="material-symbols-outlined" data-icon="stars" data-weight="fill">stars</span>
-<p class="font-black text-2xl">25% OFF ALL DRINKS</p>
-</div>
-</div>
-<div class="absolute -top-4 -right-4 w-32 h-32 opacity-90 z-20">
-<img alt="Mascot with Boba 09" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uhAn4hSd3aREJ3bS6cRYpdEVdl9CyHgEvyofhNmRIuslcza2cSgV2RLPmP0ddxbPERVv7W_lNH4B8bpPsrTHfDkjmQkRZojQjYki-I6Czp7zwP-NxTgoVKoZ7L8-iBYkQatp_rE8eikYxfuLwZGJ32RfZefFKUcM34lJmgGOn_fUxKflQa0QXeuen-jMFqQUbzrFU3hjGy0j07wMMmXwXEYvsqwmEczwszJvwG7dF3MVpcxsApBmfIv5nQP3xBQifqpyFN6W9CQ9A"/>
-</div>
-</div>
-<!-- Give Away Feature -->
-<div class="md:col-span-12 bg-surface-container-low rounded-xl p-10 md:p-16 flex flex-col lg:flex-row gap-12 items-center">
-<div class="flex-1 space-y-8">
-<h3 class="font-headline font-extrabold text-5xl text-primary leading-tight">Opening Day Giveaways!</h3>
-<p class="text-xl text-on-surface-variant max-w-2xl leading-relaxed">
-                            Be among the first to celebrate with us! We're giving away exclusive ChouChou merchandise to our loyal tea lovers.
-                        </p>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-<div class="bg-white p-6 rounded-xl kawaii-shadow flex items-start gap-4">
-<div class="bg-secondary-container p-3 rounded-full text-secondary">
-<span class="material-symbols-outlined" data-icon="card_giftcard" data-weight="fill">card_giftcard</span>
-</div>
-<div>
-<p class="font-bold text-primary">Early Bird Special</p>
-<p class="text-sm text-on-surface-variant">First 120 customers each day receive Tote Bag + Blind Cup Box + Voucher.</p>
-</div>
-</div>
-<div class="bg-white p-6 rounded-xl kawaii-shadow flex items-start gap-4">
-<div class="bg-primary-container p-3 rounded-full text-primary">
-<span class="material-symbols-outlined" data-icon="shopping_bag" data-weight="fill">shopping_bag</span>
-</div>
-<div>
-<p class="font-bold text-primary">Tier 2 Treats</p>
-<p class="text-sm text-on-surface-variant">After early bird, get a Tote Bag + Voucher with any $15+ purchase.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="flex-shrink-0 flex gap-4 rotate-2" id="gifts">
-<div class="relative group">
-<div class="absolute inset-0 bg-secondary rounded-xl rotate-3 group-hover:rotate-6 transition-transform"></div>
-<img alt="ChouChou Tote Bag" class="w-48 h-64 md:w-64 md:h-80 object-cover rounded-xl relative z-10 border-4 border-white" src="https://lh3.googleusercontent.com/aida/ADBb0ug1NjD6su6Xtzo1NNRD1T28saL-XRAYVPJTmaQ2gbNond7N9MK1iqwrZwrcAJcaPJNCnfgEKMTM-8YoHgZ0xSyXRTuTwVuaJpAYLVeCL0BqvcEn6sadMEYwafnqWeoHOo5JfRt1TVyLaFLOZa5O1JRR4v2f2bEazmUe_7OObt5AD1cRnDicSdtMtd--o4eO_5cN6zwbefdNPa__bOnGWUMZX4eg6dwqBnNvDhogIL2_og4KSHSz0S8v61HED0b7puRRbhrTWzhTrAM"/>
-<p class="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-white px-4 py-1 rounded-full text-xs font-bold text-secondary shadow-md z-20 whitespace-nowrap">Tote Bag</p>
-</div>
-<div class="relative group mt-12">
-<div class="absolute inset-0 bg-primary rounded-xl -rotate-3 group-hover:-rotate-6 transition-transform"></div>
-<img alt="Blind Cup Box" class="w-48 h-64 md:w-64 md:h-80 object-cover rounded-xl relative z-10 border-4 border-white" src="https://lh3.googleusercontent.com/aida/ADBb0ui8tyt1OyE_maWfafT5lNYt5Eem38HxKPN4HxaRBkkhc2BQZMGhCdUX8rrMPT_V4TO9NgcYf6t4oc3jTm6gwOycM4i59vLNxjl94LDbm-_ayCwjJcG3LfB0KTCrfSOUgHY41UISG7rqMAq2oKcv_83VLIR-g7rSbiEzm2WkWAUN2XaCd1tMz9uYOPq5_uCnwjQo3d22CntSxuoCbGZAxZ_BBXxIn0JfYLv0Gc9QM0dVA4aenoRnHcr6OprfTTG2kkZOAgJrccC2NA"/>
-<p class="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-white px-4 py-1 rounded-full text-xs font-bold text-primary shadow-md z-20 whitespace-nowrap">Blind Cup</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- CTA Section -->
-<section class="py-20 px-6 overflow-hidden">
-<div class="max-w-4xl mx-auto text-center space-y-8 bg-secondary/5 rounded-xl p-12 md:p-16 relative">
-<div class="absolute top-0 right-0 p-4 opacity-20">
-<span class="material-symbols-outlined text-9xl text-secondary" data-icon="bubble_chart">bubble_chart</span>
-</div>
-<h2 class="font-headline font-extrabold text-4xl text-primary">Stay in the Loop</h2>
-<p class="text-on-surface-variant text-lg">Sign up for our newsletter to receive an exclusive drink voucher for our grand opening week!</p>
-<form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto relative z-10">
-<input class="flex-1 bg-surface-container-highest border-none rounded-full px-8 py-4 focus:ring-2 focus:ring-primary focus:bg-white transition-all outline-none text-lg" placeholder="Your tea-loving email" type="email"/>
-<button class="bg-primary text-on-primary font-headline font-bold px-8 py-4 rounded-full hover:scale-105 transition-transform duration-300" type="submit">
-                    Join the Club
-                </button>
-</form>
-</div>
-</section>
-<!-- Footer -->
-<footer class="bg-[#f8f6f1] dark:bg-stone-950 full-width py-12 px-6 bg-gradient-to-t from-[#f8f6f1] to-transparent">
-<div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto w-full">
-<div class="flex flex-col gap-4 items-center md:items-start">
-<p class="font-['Be_Vietnam_Pro'] text-sm tracking-wide text-[#874954] dark:text-[#f4a6b2]">
-                    © 2024 ChouChou Tea. All rights reserved. Opening April 25.
-                </p>
-</div>
-<div class="flex gap-8">
-<a class="font-['Be_Vietnam_Pro'] text-sm tracking-wide text-[#874954] dark:text-[#f4a6b2] opacity-70 hover:opacity-100 hover:text-[#456432] transition-colors" href="#">Instagram</a>
-<a class="font-['Be_Vietnam_Pro'] text-sm tracking-wide text-[#874954] dark:text-[#f4a6b2] opacity-70 hover:opacity-100 hover:text-[#456432] transition-colors" href="#">TikTok</a>
-<a class="font-['Be_Vietnam_Pro'] text-sm tracking-wide text-[#874954] dark:text-[#f4a6b2] opacity-70 hover:opacity-100 hover:text-[#456432] transition-colors" href="#">Contact Us</a>
-</div>
-</div>
-</footer>
-</body></html>
+            <div class="hidden md:flex items-center gap-8">
+               <a class="font-headline font-bold text-lg text-[#874954] dark:text-[#f4a6b2] border-b-4 border-[#874954] rounded-full px-2 hover:scale-105 hover:text-[#456432] transition-transform duration-300" href="#">Opening Soon</a>
+               <a class="font-headline font-bold text-lg text-[#874954]/60 dark:text-[#f4a6b2]/60 hover:scale-105 hover:text-[#456432] transition-transform duration-300" href="#gifts">Gifts</a>
+               <a class="font-headline font-bold text-lg text-[#874954]/60 dark:text-[#f4a6b2]/60 hover:scale-105 hover:text-[#456432] transition-transform duration-300" href="#">Location</a>
+            </div>
+            <div class="flex items-center gap-4">
+               <button class="text-[#874954] scale-95 duration-200 ease-out hover:scale-105 p-2 rounded-full hover:bg-primary/5">
+               <span class="material-symbols-outlined" data-icon="chat">chat</span>
+               </button>
+               <button class="text-[#874954] scale-95 duration-200 ease-out hover:scale-105 p-2 rounded-full hover:bg-primary/5">
+               <span class="material-symbols-outlined" data-icon="share">share</span>
+               </button>
+            </div>
+         </div>
+      </nav>
+      <!-- Hero Section -->
+      <header class="relative min-h-[850px] flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-[#e3f2fd] to-[#ffffff]">
+         <!-- Sky & Background Elements -->
+         <div class="absolute inset-0 z-0">
+            <!-- Floating 3D Flowers -->
+            <img alt="Flower" class="absolute top-[10%] left-[5%] w-24 h-24 floating opacity-80" src="https://lh3.googleusercontent.com/aida/ADBb0uiOkFKbjN2IJnlUaWkdNbs3whu08J1eUR4Z9uwYu-Dtac7wa-1_HLa3ttrEcK1tLUJy-1LUPk6xcM8GcNVHnmvB6JCE32FpP-uffkQh2OUwEBEqypuGd3fZxZnzhQz6j6Zx5NIOCD5LBbiYxZjkB6V6oWwGlJ8n6j20t-3llaRVUEFgxJ_NczEMvdRTRaza0Aq5jp4upP49Ykeei1VqW89G4EBeX9bmD-IF8VALjxVAnZAI14RpqIYM8xM_mo5QdhmRYYmICxdnHpU"/>
+            <img alt="Flower" class="absolute top-[20%] right-[10%] w-32 h-32 floating opacity-90" src="https://lh3.googleusercontent.com/aida/ADBb0uiOkFKbjN2IJnlUaWkdNbs3whu08J1eUR4Z9uwYu-Dtac7wa-1_HLa3ttrEcK1tLUJy-1LUPk6xcM8GcNVHnmvB6JCE32FpP-uffkQh2OUwEBEqypuGd3fZxZnzhQz6j6Zx5NIOCD5LBbiYxZjkB6V6oWwGlJ8n6j20t-3llaRVUEFgxJ_NczEMvdRTRaza0Aq5jp4upP49Ykeei1VqW89G4EBeX9bmD-IF8VALjxVAnZAI14RpqIYM8xM_mo5QdhmRYYmICxdnHpU" style="animation-delay: 1s;"/>
+            <span class="material-symbols-outlined absolute top-[15%] left-[15%] text-4xl text-secondary music-note" data-icon="music_note">music_note</span>
+            <span class="material-symbols-outlined absolute top-[30%] right-[25%] text-5xl text-primary music-note" data-icon="music_note" style="animation-delay: 1.5s;">music_note</span>
+            <span class="material-symbols-outlined absolute top-[10%] right-[40%] text-3xl text-secondary music-note" data-icon="music_note" style="animation-delay: 0.8s;">music_note</span>
+            <span class="material-symbols-outlined absolute bottom-[20%] left-[40%] text-4xl text-primary music-note" data-icon="music_note" style="animation-delay: 2.2s;">music_note</span>
+            <span class="material-symbols-outlined absolute top-[40%] left-[5%] text-2xl text-secondary music-note" data-icon="music_note" style="animation-delay: 3s;">music_note</span>
+            <!-- Rolling Hills -->
+            <div class="absolute bottom-0 w-full h-[30%] bg-pale-green/40 rounded-[100%_100%_0_0] translate-y-1/2 scale-150"></div>
+            <div class="absolute bottom-0 w-full h-[20%] bg-pale-green/60 rounded-[100%_100%_0_0] translate-y-1/4 scale-125"></div>
+         </div>
+         <!-- Main Hero Content -->
+         <div class="relative z-10 max-w-7xl mx-auto px-6 w-full flex flex-col lg:flex-row items-center justify-between pt-12 pb-24">
+            <div class="w-full lg:w-1/2 flex justify-center lg:justify-start mb-12 lg:mb-0">
+               <div class="relative w-72 md:w-[520px] lg:w-[520px] floating">
+                  <img alt="Mascot 07" class="w-full h-auto drop-shadow-2xl" src="https://lh3.googleusercontent.com/aida/ADBb0uiUW3mPXiO8EmHTD-A7wBGwijAUdpKZbucJaNKooMWlUvm57iwHlYsQeYt-n3myF2eKBJ3tzLp1O_IKcCDuymnCQY0nh-hbKMrAB1cdowRCmbqVPHZllufgs19ARaDGmxxvY3isd31SQBwatw3A9AytKQCuAwLn4rQsHhoSrYMWnOy7E9pYJrZ9zzA3ktbTHK-TMkxUybsd-W2kSc2mi6i9y-4Lg7D8gJhvtgCLkwT_ooYqMZAoxTbJvKwazipKJlW27htI1zjAxD8"/>
+               </div>
+            </div>
+            <div class="w-full lg:w-1/2 flex flex-col items-center lg:items-end gap-8">
+               <div class="w-full max-w-2xl">
+                  <img alt="Grand Opening Title" class="w-full h-auto drop-shadow-lg" src="https://lh3.googleusercontent.com/aida/ADBb0uizsnx9jA9RHhJH6duHMg937nhYAefAAeVZkFXD5bIpHRDrLW272xb38qMxBrzoF7SCklLA8jV_LdNySLFA0Zf7_URZtSBneoFW8Z0atprbTRP_OnPSeKa26twYBnRghCNSwOQi3PsxkZWVA11Uag1aWf6yF3OdKeNjE6-hU0vaWaGrDSYIPKs3hThNOiibSAyJqFLat72gEu6udKzBSr--IJlPQ-1jTBlHfkYr5UH_XR6GYFHx_BDbqBPm-yXcA80_6HNLvBgAX04"/>
+               </div>
+               <div class="flex flex-col gap-6 w-full max-w-md">
+                  <!-- Grand Opening Bubble -->
+                  <div class="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-xl border-4 border-primary/20 flex flex-col items-center transform rotate-2 hover:rotate-0 transition-transform">
+                     <h3 class="text-primary font-headline font-extrabold text-xl">APR 25-26 (SAT - SUN)</h3>
+                     <p class="text-on-surface-variant font-bold">11 AM - 9:30 PM</p>
+                     <div class="mt-2 bg-primary/10 px-6 py-2 rounded-full">
+                        <span class="text-primary font-black text-3xl italic">25% OFF</span>
+                        <span class="text-primary font-bold ml-1">ALL DRINKS</span>
+                     </div>
+                  </div>
+                  <!-- Soft Opening Bubble -->
+                  <div class="bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-xl border-4 border-secondary/20 flex flex-col items-center transform -rotate-1 hover:rotate-0 transition-transform">
+                     <h3 class="text-secondary font-headline font-extrabold text-xl">SOFT OPENING: APR 17-19</h3>
+                     <div class="mt-2 bg-secondary/10 px-6 py-2 rounded-full">
+                        <span class="text-secondary font-black text-2xl italic">20% OFF</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- Integrated Countdown Timer -->
+         <div class="relative z-20 -mb-24 w-full max-w-4xl px-6">
+            <div class="bg-white rounded-xl p-8 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 border-b-8 border-secondary-container">
+               <div class="text-center md:text-left">
+                  <h4 class="font-headline font-bold text-primary text-xl mb-2">Grand Opening Launching In</h4>
+                  <p class="text-sm text-on-surface-variant">Don't miss the celebration!</p>
+               </div>
+               <div class="flex gap-4 md:gap-6">
+                  <div class="text-center">
+                     <div class="bg-primary/5 w-16 h-16 rounded-xl flex items-center justify-center text-2xl font-black text-primary">24</div>
+                     <span class="text-[10px] font-bold uppercase tracking-widest opacity-60">Days</span>
+                  </div>
+                  <div class="text-center">
+                     <div class="bg-primary/5 w-16 h-16 rounded-xl flex items-center justify-center text-2xl font-black text-primary">12</div>
+                     <span class="text-[10px] font-bold uppercase tracking-widest opacity-60">Hrs</span>
+                  </div>
+                  <div class="text-center">
+                     <div class="bg-primary/5 w-16 h-16 rounded-xl flex items-center justify-center text-2xl font-black text-primary">45</div>
+                     <span class="text-[10px] font-bold uppercase tracking-widest opacity-60">Min</span>
+                  </div>
+                  <div class="text-center">
+                     <div class="bg-primary/5 w-16 h-16 rounded-xl flex items-center justify-center text-2xl font-black text-primary">09</div>
+                     <span class="text-[10px] font-bold uppercase tracking-widest opacity-60">Sec</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- Event Details Bento Grid -->
+      <section class="pt-40 pb-32 px-6">
+         <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+               <!-- Soft Opening Card -->
+               <div class="md:col-span-6 bg-surface-container rounded-xl p-10 flex flex-col gap-6 relative overflow-hidden">
+                  <div class="absolute -top-4 -right-4 w-32 h-32 bg-secondary/10 rounded-full"></div>
+                  <span class="bg-secondary text-on-secondary px-4 py-1 rounded-full w-fit font-bold text-sm tracking-widest uppercase">The Preview</span>
+                  <h3 class="font-headline font-extrabold text-4xl text-on-surface">Soft Opening</h3>
+                  <div class="space-y-4">
+                     <div class="flex items-center gap-4">
+                        <span class="material-symbols-outlined text-primary" data-icon="calendar_month">calendar_month</span>
+                        <p class="font-semibold text-lg">Apr 17-19 (Fri-Sun)</p>
+                     </div>
+                     <div class="flex items-center gap-4">
+                        <span class="material-symbols-outlined text-primary" data-icon="schedule">schedule</span>
+                        <p class="font-semibold text-lg">11 AM - 8 PM</p>
+                     </div>
+                     <div class="flex items-center gap-4 text-primary">
+                        <span class="material-symbols-outlined text-primary" data-icon="percent" data-weight="fill">percent</span>
+                        <p class="font-black text-2xl">20% OFF ALL DRINKS</p>
+                     </div>
+                  </div>
+                  <div class="absolute -bottom-4 -right-4 w-32 h-32 opacity-80">
+                     <img alt="Excited Mascot 04" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uh42Sv-JPhOw2n8EB7AHndznItGd0Wc2i4AMSntXlup7XPwz4UtXHoSbQlgpdHwW8D00lTNUSZ5eFgmmfLZPthGihgjOdGGbCJ4X2MLHLrces34nCf2pWXcC5CD2cMa4Iu4GPaHhP0r2c4aWpPP97oqBYRoZdq7lePQj8B8r7PgNHOqSxXHo01R25TWcoQwbytGer9l1NhZSl4AD6BMLgcpfAo_GgwgBlTyaGh74lFfB8V8OvUYwjGR-miTXyFwrNgagnrlXk4DYg"/>
+                  </div>
+               </div>
+               <!-- Grand Opening Support Card -->
+               <div class="md:col-span-6 bg-soft-pink/50 border-4 border-primary/20 rounded-xl p-10 flex flex-col gap-6 relative overflow-hidden kawaii-shadow">
+                  <div class="absolute -bottom-10 -left-10 w-48 h-48 bg-primary/5 rounded-full"></div>
+                  <span class="bg-tertiary-container text-on-tertiary-container px-4 py-1 rounded-full w-fit font-bold text-sm tracking-widest uppercase relative z-10">The Celebration</span>
+                  <h3 class="font-headline font-extrabold text-4xl text-primary relative z-10">Main Event Info</h3>
+                  <div class="space-y-4 relative z-10">
+                     <div class="flex items-center gap-4 text-primary">
+                        <span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+                        <p class="font-bold text-lg">Apr 25-26 (Sat-Sun)</p>
+                     </div>
+                     <div class="flex items-center gap-4 text-primary">
+                        <span class="material-symbols-outlined" data-icon="alarm">alarm</span>
+                        <p class="font-bold text-lg">11 AM - 9:30 PM</p>
+                     </div>
+                     <div class="flex items-center gap-4 text-secondary">
+                        <span class="material-symbols-outlined" data-icon="stars" data-weight="fill">stars</span>
+                        <p class="font-black text-2xl">25% OFF ALL DRINKS</p>
+                     </div>
+                  </div>
+                  <div class="absolute -top-4 -right-4 w-32 h-32 opacity-90 z-20">
+                     <img alt="Mascot with Boba 09" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uhAn4hSd3aREJ3bS6cRYpdEVdl9CyHgEvyofhNmRIuslcza2cSgV2RLPmP0ddxbPERVv7W_lNH4B8bpPsrTHfDkjmQkRZojQjYki-I6Czp7zwP-NxTgoVKoZ7L8-iBYkQatp_rE8eikYxfuLwZGJ32RfZefFKUcM34lJmgGOn_fUxKflQa0QXeuen-jMFqQUbzrFU3hjGy0j07wMMmXwXEYvsqwmEczwszJvwG7dF3MVpcxsApBmfIv5nQP3xBQifqpyFN6W9CQ9A"/>
+                  </div>
+               </div>
+               <!-- Give Away Feature -->
+               <div class="md:col-span-12 bg-surface-container-low rounded-xl p-10 md:p-16 flex flex-col lg:flex-row gap-12 items-center">
+                  <div class="flex-1 space-y-8">
+                     <h3 class="font-headline font-extrabold text-5xl text-primary leading-tight">Opening Day Giveaways!</h3>
+                     <p class="text-xl text-on-surface-variant max-w-2xl leading-relaxed">
+                        Be among the first to celebrate with us! We're giving away exclusive ChouChou merchandise to our loyal tea lovers.
+                     </p>
+                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="bg-white p-6 rounded-xl kawaii-shadow flex items-start gap-4">
+                           <div class="bg-secondary-container p-3 rounded-full text-secondary">
+                              <span class="material-symbols-outlined" data-icon="card_giftcard" data-weight="fill">card_giftcard</span>
+                           </div>
+                           <div>
+                              <p class="font-bold text-primary">Early Bird Special</p>
+                              <p class="text-sm text-on-surface-variant">First 120 customers each day receive Tote Bag + Blind Cup Box + Voucher.</p>
+                           </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl kawaii-shadow flex items-start gap-4">
+                           <div class="bg-primary-container p-3 rounded-full text-primary">
+                              <span class="material-symbols-outlined" data-icon="shopping_bag" data-weight="fill">shopping_bag</span>
+                           </div>
+                           <div>
+                              <p class="font-bold text-primary">Tier 2 Treats</p>
+                              <p class="text-sm text-on-surface-variant">After early bird, get a Tote Bag + Voucher with any $15+ purchase.</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="flex-shrink-0 flex gap-4 rotate-2" id="gifts">
+                     <div class="relative group">
+                        <div class="absolute inset-0 bg-secondary rounded-xl rotate-3 group-hover:rotate-6 transition-transform"></div>
+                        <img alt="ChouChou Tote Bag" class="w-48 h-64 md:w-64 md:h-80 object-cover rounded-xl relative z-10 border-4 border-white" src="https://lh3.googleusercontent.com/aida/ADBb0ug1NjD6su6Xtzo1NNRD1T28saL-XRAYVPJTmaQ2gbNond7N9MK1iqwrZwrcAJcaPJNCnfgEKMTM-8YoHgZ0xSyXRTuTwVuaJpAYLVeCL0BqvcEn6sadMEYwafnqWeoHOo5JfRt1TVyLaFLOZa5O1JRR4v2f2bEazmUe_7OObt5AD1cRnDicSdtMtd--o4eO_5cN6zwbefdNPa__bOnGWUMZX4eg6dwqBnNvDhogIL2_og4KSHSz0S8v61HED0b7puRRbhrTWzhTrAM"/>
+                        <p class="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-white px-4 py-1 rounded-full text-xs font-bold text-secondary shadow-md z-20 whitespace-nowrap">Tote Bag</p>
+                     </div>
+                     <div class="relative group mt-12">
+                        <div class="absolute inset-0 bg-primary rounded-xl -rotate-3 group-hover:-rotate-6 transition-transform"></div>
+                        <img alt="Blind Cup Box" class="w-48 h-64 md:w-64 md:h-80 object-cover rounded-xl relative z-10 border-4 border-white" src="https://lh3.googleusercontent.com/aida/ADBb0ui8tyt1OyE_maWfafT5lNYt5Eem38HxKPN4HxaRBkkhc2BQZMGhCdUX8rrMPT_V4TO9NgcYf6t4oc3jTm6gwOycM4i59vLNxjl94LDbm-_ayCwjJcG3LfB0KTCrfSOUgHY41UISG7rqMAq2oKcv_83VLIR-g7rSbiEzm2WkWAUN2XaCd1tMz9uYOPq5_uCnwjQo3d22CntSxuoCbGZAxZ_BBXxIn0JfYLv0Gc9QM0dVA4aenoRnHcr6OprfTTG2kkZOAgJrccC2NA"/>
+                        <p class="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-white px-4 py-1 rounded-full text-xs font-bold text-primary shadow-md z-20 whitespace-nowrap">Blind Cup</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- CTA Section -->
+      <section class="py-20 px-6 overflow-hidden">
+         <div class="max-w-4xl mx-auto text-center space-y-8 bg-secondary/5 rounded-xl p-12 md:p-16 relative">
+            <div class="absolute top-0 right-0 p-4 opacity-20">
+               <span class="material-symbols-outlined text-9xl text-secondary" data-icon="bubble_chart">bubble_chart</span>
+            </div>
+            <h2 class="font-headline font-extrabold text-4xl text-primary">Stay in the Loop</h2>
+            <p class="text-on-surface-variant text-lg">Sign up for our newsletter to receive an exclusive drink voucher for our grand opening week!</p>
+            <form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto relative z-10">
+               <input class="flex-1 bg-surface-container-highest border-none rounded-full px-8 py-4 focus:ring-2 focus:ring-primary focus:bg-white transition-all outline-none text-lg" placeholder="Your tea-loving email" type="email"/>
+               <button class="bg-primary text-on-primary font-headline font-bold px-8 py-4 rounded-full hover:scale-105 transition-transform duration-300" type="submit">
+               Join the Club
+               </button>
+            </form>
+         </div>
+      </section>
+      <!-- Footer -->
+      <footer class="bg-[#f8f6f1] dark:bg-stone-950 full-width py-12 px-6 bg-gradient-to-t from-[#f8f6f1] to-transparent">
+         <div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto w-full">
+            <div class="flex flex-col gap-4 items-center md:items-start">
+               <p class="font-['Be_Vietnam_Pro'] text-sm tracking-wide text-[#874954] dark:text-[#f4a6b2]">
+                  © 2024 ChouChou Tea. All rights reserved. Opening April 25.
+               </p>
+            </div>
+            <div class="flex gap-8">
+               <a class="font-['Be_Vietnam_Pro'] text-sm tracking-wide text-[#874954] dark:text-[#f4a6b2] opacity-70 hover:opacity-100 hover:text-[#456432] transition-colors" href="#">Instagram</a>
+               <a class="font-['Be_Vietnam_Pro'] text-sm tracking-wide text-[#874954] dark:text-[#f4a6b2] opacity-70 hover:opacity-100 hover:text-[#456432] transition-colors" href="#">TikTok</a>
+               <a class="font-['Be_Vietnam_Pro'] text-sm tracking-wide text-[#874954] dark:text-[#f4a6b2] opacity-70 hover:opacity-100 hover:text-[#456432] transition-colors" href="#">Contact Us</a>
+            </div>
+         </div>
+      </footer>
+   </body>
+</html>
+<script>
+   const countdown = () => {
+       const countDownDate = new Date("2026-12-31T23:59:59").getTime();
+   
+       const x = setInterval(() => {
+           const now = new Date().getTime();
+           const distance = countDownDate - now;
+   
+           const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+           const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+           const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+           const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+   
+           document.getElementById("demo").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s `;
+   
+           if (distance < 0) {
+               clearInterval(x);
+               document.getElementById("demo").innerHTML = "EXPIRED";
+           }
+       }, 1000);
+   };
+   
+   countdown();
+</script>
