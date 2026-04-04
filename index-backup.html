@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>ChouChou Tea - Opening Soon</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800;900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "outline": "#7f7478",
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed-dim": "#bbcca9",
+            "on-tertiary-fixed-variant": "#5e4200",
+            "inverse-on-surface": "#f1f1ef",
+            "on-error-container": "#93000a",
+            "tertiary-container": "#ffe7c2",
+            "on-secondary-container": "#5a694c",
+            "on-primary-fixed": "#25181e",
+            "background": "#f9f9f7",
+            "tertiary-fixed": "#ffdea8",
+            "on-tertiary-fixed": "#271900",
+            "on-surface": "#1a1c1b",
+            "inverse-primary": "#d7c1c8",
+            "error": "#ba1a1a",
+            "on-tertiary": "#ffffff",
+            "on-primary-container": "#76646b",
+            "surface-container-high": "#e8e8e6",
+            "on-surface-variant": "#4d4447",
+            "surface-variant": "#e2e3e1",
+            "surface-container": "#eeeeec",
+            "primary": "#6b5a60",
+            "error-container": "#ffdad6",
+            "primary-container": "#fce4ec",
+            "on-primary-fixed-variant": "#524249",
+            "surface-container-low": "#f4f4f2",
+            "on-secondary-fixed-variant": "#3d4b30",
+            "outline-variant": "#d0c3c7",
+            "surface-tint": "#6b5a60",
+            "on-primary": "#ffffff",
+            "surface-container-highest": "#e2e3e1",
+            "surface": "#f9f9f7",
+            "on-background": "#1a1c1b",
+            "on-secondary": "#ffffff",
+            "on-secondary-fixed": "#121f08",
+            "surface-bright": "#f9f9f7",
+            "secondary-container": "#d7e8c3",
+            "primary-fixed": "#f4dce4",
+            "inverse-surface": "#2f3130",
+            "on-error": "#ffffff",
+            "surface-dim": "#dadad8",
+            "secondary": "#546346",
+            "tertiary": "#7a5912",
+            "secondary-fixed": "#d7e8c3",
+            "primary-fixed-dim": "#d7c1c8"
+          },
+          fontFamily: {
+            "headline": ["Unbounded", "cursive"],
+            "body": ["Unbounded", "sans-serif"],
+            "label": ["Unbounded", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.75rem",
+            "lg": "1.25rem",
+            "xl": "1.75rem",
+            "2xl": "2.25rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .daisy-float {
+      pointer-events: none;
+      position: absolute;
+      z-index: 10;
+    }
+
+    @keyframes float-slow {
+      0%,
+      100% {
+        transform: translateY(0) rotate(0deg);
+      }
+
+      50% {
+        transform: translateY(-20px) rotate(5deg);
+      }
+    }
+
+    .animate-float-slow {
+      animation: float-slow 4s infinite ease-in-out;
+    }
+
+    @keyframes float-slower {
+      0%,
+      100% {
+        transform: translateY(0) rotate(0deg);
+      }
+
+      50% {
+        transform: translateY(-15px) rotate(-10deg);
+      }
+    }
+
+    .animate-float-slower {
+      animation: float-slower 6s infinite ease-in-out;
+    }
+
+    .kawaii-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .kawaii-card::before {
+      content: "✨";
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      font-size: 10px;
+      opacity: 0.6;
+    }
+
+    .bg-sparkle {
+      background-image: radial-gradient(circle, rgba(255, 255, 255, 0.8) 1px, transparent 1px);
+      background-size: 15px 15px;
+    }
+
+    .speech-bubble {
+      position: relative;
+      background: #ffffff;
+      border-radius: 1.5rem;
+      filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
+    }
+
+    .speech-bubble::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 20%;
+      width: 0;
+      height: 0;
+      border: 15px solid transparent;
+      border-top-color: #ffffff;
+      border-bottom: 0;
+      border-left: 0;
+      margin-left: -7.5px;
+      margin-bottom: -15px;
+    }
+
+    .nav-link,
+    .calendar-link,
+    .phone-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .nav-link:focus-visible,
+    .calendar-link:focus-visible,
+    .phone-link:focus-visible {
+      outline: 2px solid rgba(107, 90, 96, 0.35);
+      outline-offset: 4px;
+      border-radius: 0.75rem;
+    }
+  </style>
+</head>
+
+<body
+  class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-primary scroll-smooth">
+  <nav
+    class="sticky top-0 w-full z-50 bg-white/70 backdrop-blur-xl flex justify-between items-center px-6 md:px-12 py-5 shadow-[0_40px_40px_-15px_rgba(107,90,96,0.05)]">
+    <a href="#top" class="font-headline font-black text-2xl tracking-tighter text-[#6B5A60]">ChouChou Tea</a>
+    <div class="hidden md:flex items-center gap-10 font-medium text-sm tracking-wide ml-auto">
+      <a class="nav-link text-[#6B5A60]/60 hover:text-[#6B5A60] transition-all duration-300" href="#upcoming-events">Upcoming Events</a>
+      <a class="nav-link text-[#6B5A60]/60 hover:text-[#6B5A60] transition-all duration-300" href="#giveaways">Giveaways</a>
+      <a class="nav-link text-[#6B5A60]/60 hover:text-[#6B5A60] transition-all duration-300" href="#locations">Locations</a>
+    </div>
+  </nav>
+
+  <main id="top" class="relative overflow-hidden">
+    <section class="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden py-20 px-6">
+      <div class="absolute inset-0 z-0">
+        <img alt="3D meadow landscape" class="w-full h-full object-cover"
+          src="./images/background.png" />
+        <div class="absolute inset-0 bg-white/10"></div>
+      </div>
+
+      <img alt="daisy flower" class="daisy-float w-16 h-16 top-20 left-[10%] opacity-80 animate-float-slow"
+        src="./images/daisy-flower.png" />
+      <img alt="daisy flower" class="daisy-float w-12 h-12 bottom-40 right-[15%] opacity-60 animate-float-slower"
+        src="./images/daisy-flower.png" />
+
+      <div class="relative z-10 w-full max-w-6xl flex flex-col items-center">
+        <div class="relative w-full flex flex-col items-center text-center space-y-8">
+          <div
+            class="relative z-20 w-full max-w-3xl mx-auto drop-shadow-2xl hover:scale-[1.02] transition-transform duration-500">
+            <img alt="GRAND OPENING" class="w-full"
+              src="./images/tagline.png" />
+          </div>
+
+          <div class="relative mt-[-40px] mb-8">
+            <div class="absolute -top-8 -right-14 md:-top-10 md:-right-5 z-20 animate-float-slower">
+              <div
+                class="speech-bubble bg-white text-primary font-headline font-black text-xs md:text-sm px-6 py-4 border-2 border-primary-container/20 whitespace-nowrap transform hover:scale-110 transition-transform duration-300">
+                DON'T MISS IT!
+              </div>
+            </div>
+            <img alt="Mascot 07 with boba tea"
+              class="w-64 h-64 md:w-[400px] md:h-[400px] object-contain relative z-10 animate-float-slow drop-shadow-xl"
+              src="./images/Chouchou Mascot-07.png" />
+          </div>
+
+          <div class="space-y-6 z-20">
+            <h2 id="countdown-label"
+              class="font-headline text-primary font-black uppercase tracking-[0.25em] text-sm md:text-base bg-white/80 backdrop-blur-md px-6 py-2 rounded-full inline-block shadow-sm">
+              Counting down to April 25th
+            </h2>
+
+            <div class="flex items-center justify-center gap-3 md:gap-6">
+              <div class="group">
+                <div
+                  class="bg-white/90 backdrop-blur-xl w-20 h-24 md:w-28 md:h-32 rounded-2xl shadow-xl flex flex-col items-center justify-center border-b-4 border-primary group-hover:-translate-y-2 transition-all duration-300">
+                  <span id="days" class="text-3xl md:text-5xl font-black text-primary">00</span>
+                  <span class="text-[10px] font-bold uppercase tracking-widest text-outline">Days</span>
+                </div>
+              </div>
+              <div class="group">
+                <div
+                  class="bg-white/90 backdrop-blur-xl w-20 h-24 md:w-28 md:h-32 rounded-2xl shadow-xl flex flex-col items-center justify-center border-b-4 border-secondary group-hover:-translate-y-2 transition-all duration-300">
+                  <span id="hours" class="text-3xl md:text-5xl font-black text-secondary">00</span>
+                  <span class="text-[10px] font-bold uppercase tracking-widest text-outline">Hours</span>
+                </div>
+              </div>
+              <div class="group">
+                <div
+                  class="bg-white/90 backdrop-blur-xl w-20 h-24 md:w-28 md:h-32 rounded-2xl shadow-xl flex flex-col items-center justify-center border-b-4 border-primary group-hover:-translate-y-2 transition-all duration-300">
+                  <span id="minutes" class="text-3xl md:text-5xl font-black text-primary">00</span>
+                  <span class="text-[10px] font-bold uppercase tracking-widest text-outline">Mins</span>
+                </div>
+              </div>
+              <div class="group">
+                <div
+                  class="bg-white/90 backdrop-blur-xl w-20 h-24 md:w-28 md:h-32 rounded-2xl shadow-xl flex flex-col items-center justify-center border-b-4 border-tertiary group-hover:-translate-y-2 transition-all duration-300">
+                  <span id="seconds" class="text-3xl md:text-5xl font-black text-tertiary">00</span>
+                  <span class="text-[10px] font-bold uppercase tracking-widest text-outline">Secs</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-6 z-20">
+            <button
+              class="bg-secondary text-on-secondary px-12 py-5 font-black text-base uppercase tracking-widest shadow-2xl shadow-secondary/40 hover:scale-105 active:scale-95 transition-all rounded-2xl border-2 border-white/20">
+              Get Directions
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="upcoming-events" class="bg-surface-container-low py-24 scroll-mt-28">
+      <div class="max-w-7xl mx-auto px-6 md:px-12">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+          <div class="max-w-xl">
+            <h2 class="font-headline text-4xl md:text-5xl font-black text-primary mb-4 leading-tight">Mark
+              your calendars.</h2>
+            <p class="text-on-surface-variant text-lg">We're hosting two exclusive launch events to
+              celebrate our first location. Join us for sips and smiles.</p>
+          </div>
+          <a id="calendar-button" href="#"
+            class="calendar-link bg-primary-container px-6 py-3 rounded-xl hover:scale-[1.02] transition-transform duration-300">
+            <span class="material-symbols-outlined text-primary">calendar_month</span>
+            <span class="font-bold text-primary text-sm">April 2024 Schedule</span>
+          </a>
+        </div>
+        <div class="grid md:grid-cols-2 gap-12">
+          <div
+            class="bg-surface-container-lowest rounded-xl overflow-hidden group hover:shadow-2xl transition-shadow duration-500 flex flex-col md:flex-row">
+            <div class="md:w-1/2 p-10 space-y-6 flex flex-col justify-center">
+              <div
+                class="inline-block bg-secondary-container text-on-secondary-container px-4 py-1.5 text-[10px] font-black uppercase tracking-widest rounded-xl w-fit">
+                Phase 01</div>
+              <h3 class="font-headline text-2xl font-bold text-primary">Soft Opening</h3>
+              <div class="space-y-2">
+                <p class="text-xl font-black text-secondary">20% OFF ALL DRINKS</p>
+                <p class="text-on-surface-variant font-medium text-sm">April 17th — April 19th</p>
+              </div>
+            </div>
+            <div class="md:w-1/2 bg-secondary-container/30 relative min-h-[250px] flex items-center justify-center p-8">
+              <img class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700"
+                data-alt="Mascot 09 celebrating"
+                src="./images/Chouchou Mascot-09.png" />
+            </div>
+          </div>
+          <div
+            class="bg-surface-container-lowest rounded-xl overflow-hidden group hover:shadow-2xl transition-shadow duration-500 flex flex-col md:flex-row">
+            <div class="md:w-1/2 p-10 space-y-6 flex flex-col justify-center">
+              <div
+                class="inline-block bg-primary-container text-on-primary-container px-4 py-1.5 text-[10px] font-black uppercase tracking-widest rounded-xl w-fit">
+                Phase 02</div>
+              <h3 class="font-headline text-2xl font-bold text-primary">Grand Openning</h3>
+              <div class="space-y-2">
+                <p class="text-xl font-black text-primary">25% OFF EVERYTHING</p>
+                <p class="text-on-surface-variant font-medium text-sm">April 25th — April 26th</p>
+              </div>
+            </div>
+            <div class="md:w-1/2 bg-primary-container/30 relative min-h-[250px] flex items-center justify-center p-8">
+              <img class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700"
+                data-alt="Mascot 04 excited"
+                src="./images/Chouchou Mascot-04.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="giveaways" class="py-24 max-w-7xl mx-auto px-6 md:px-12 scroll-mt-28">
+      <div class="text-center mb-16 space-y-4">
+        <h2 class="font-headline text-4xl md:text-5xl font-black text-primary">Grand Opening Day Giveaways!</h3>
+      </div>
+      <div class="grid lg:grid-cols-2 gap-12">
+        <div
+          class="bg-surface-container-low rounded-[2rem] p-8 md:p-12 border border-outline-variant/20 hover:shadow-xl transition-all duration-500 relative overflow-hidden">
+          <div class="absolute -top-10 -right-10 w-40 h-40 bg-secondary-container/20 blur-3xl rounded-full"></div>
+          <div class="flex flex-col h-full space-y-8 relative z-10">
+            <div class="space-y-4 text-center md:text-left">
+              <span
+                class="inline-block bg-secondary text-on-secondary px-4 py-2 rounded-lg font-black text-[10px] uppercase tracking-[0.2em] shadow-lg">Early
+                Bird Special</span>
+              <h4 class="font-headline text-2xl md:text-3xl font-black text-primary leading-tight">First
+                120 customers each day receive:</h4>
+              <p class="text-on-surface-variant font-medium">ChouChou Tote Bag + Blind Cup + Drink Voucher
+              </p>
+            </div>
+            <div class="grid grid-cols-2 gap-6 items-end">
+              <div class="space-y-3 group">
+                <div
+                  class="kawaii-card bg-secondary-container/40 bg-sparkle rounded-2xl p-4 shadow-sm aspect-square flex items-center justify-center transform group-hover:scale-105 group-hover:rotate-2 transition-all duration-300">
+                  <img alt="ChouChou Tote Bag" class="w-full h-full object-contain drop-shadow-md"
+                    src="./images/gift-2.png" />
+                </div>
+                <p class="text-[9px] font-black uppercase text-center text-secondary tracking-widest font-label">
+                  Tote Bag</p>
+              </div>
+              <div class="space-y-3 group">
+                <div
+                  class="kawaii-card bg-primary-container/40 bg-sparkle rounded-2xl p-4 shadow-sm aspect-square flex items-center justify-center transform group-hover:scale-105 group-hover:-rotate-2 transition-all duration-300">
+                  <img alt="Blind Cup" class="w-full h-full object-contain drop-shadow-md"
+                    src="./images/gift.png" />
+                </div>
+                <p class="text-[9px] font-black uppercase text-center text-primary tracking-widest font-label">
+                  Blind Cup</p>
+              </div>
+              <div class="space-y-3 group">
+                <div
+                  class="kawaii-card bg-tertiary-container/40 bg-sparkle rounded-2xl p-4 shadow-sm aspect-square flex items-center justify-center transform group-hover:scale-105 group-hover:rotate-2 transition-all duration-300">
+                  <img alt="Drink Voucher" class="w-full h-full object-contain drop-shadow-md"
+                    src="./images/voucher.png" />
+                </div>
+                <p class="text-[9px] font-black uppercase text-center text-tertiary tracking-widest font-label">
+                  Voucher</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-surface-container-low rounded-[2rem] p-8 md:p-12 border border-outline-variant/20 hover:shadow-xl transition-all duration-500 relative overflow-hidden">
+          <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-tertiary-container/20 blur-3xl rounded-full"></div>
+          <div class="flex flex-col h-full space-y-8 relative z-10">
+            <div class="space-y-4 text-center md:text-left">
+              <span
+                class="inline-block bg-tertiary text-on-tertiary px-4 py-2 rounded-lg font-black text-[10px] uppercase tracking-[0.2em] shadow-lg">Tier
+                2 Treats</span>
+              <h4 class="font-headline text-2xl md:text-3xl font-black text-primary leading-tight">After
+                the first 120 customers:</h4>
+              <p class="text-on-surface-variant font-medium">ChouChou Tote Bag + Drink Voucher</p>
+              <i class="text-primary font-light text-xs tracking-wide">* With purchases from $15</i>
+            </div>
+            <div class="grid grid-cols-2 gap-10 items-end max-w-sm mx-auto w-full pt-4">
+              <div class="space-y-3 group">
+                <div
+                  class="kawaii-card bg-secondary-container/40 bg-sparkle rounded-2xl p-6 shadow-sm aspect-square flex items-center justify-center transform group-hover:scale-105 group-hover:rotate-2 transition-all duration-300">
+                  <img alt="ChouChou Tote Bag" class="w-full h-full object-contain drop-shadow-md"
+                    src="./images/gift-2.png" />
+                </div>
+                <p class="text-[10px] font-black uppercase text-center text-secondary tracking-widest font-label">
+                  Tote Bag</p>
+              </div>
+              <div class="space-y-3 group">
+                <div
+                  class="kawaii-card bg-tertiary-container/40 bg-sparkle rounded-2xl p-6 shadow-sm aspect-square flex items-center justify-center transform group-hover:scale-105 group-hover:-rotate-2 transition-all duration-300">
+                  <img alt="Drink Voucher" class="w-full h-full object-contain drop-shadow-md"
+                    src="./images/voucher.png" />
+                </div>
+                <p class="text-[10px] font-black uppercase text-center text-tertiary tracking-widest font-label">
+                  Voucher</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="locations" class="max-w-5xl mx-auto px-6 mb-24 scroll-mt-28">
+      <div
+        class="bg-primary-container text-primary p-12 md:p-20 relative overflow-hidden rounded-xl shadow-xl flex flex-col md:flex-row items-center gap-12">
+        <img class="daisy-float w-10 h-10 top-10 right-10 opacity-30 animate-pulse"
+          src="./images/daisy-flower.png" />
+        <div class="w-48 h-48 md:w-64 md:h-64 flex-shrink-0 relative z-10">
+          <img alt="ChouChou Mascot dancing" class="w-full h-full object-contain"
+            src="https://lh3.googleusercontent.com/aida/ADBb0ugnlrC9KweqHHF9sU6YtNWVPI4n9yWo1CPs3siXwABortYy0a5uuq92LAYHHo0hdkI0Pg5gyo_nguoOfWyCv7th_cXyzUhlFwcEU078ApP5pHB0tswqXjlW5iZJcNUx6cH6y2I9Jr7uT6aiUXo2WdQvkLUTXGEmGHcMD-pWhoQYnvJxjCZl8OmLlxVjO6CHtx0tsbEdNcQU4Zes_oQ8Z-Vde7-HzI0hL5eFctJg5ZDhg0_4SqWJBAHLWB-jxPL5tb23GSj5KvcnUw" />
+        </div>
+        <div class="relative z-10 flex-grow text-center md:text-left space-y-6">
+          <h3 class="font-headline text-4xl md:text-5xl font-black tracking-tighter">Visit Us</h3>
+          <div class="space-y-4">
+            <div class="flex items-center justify-center md:justify-start gap-4">
+              <span
+                class="material-symbols-outlined text-primary bg-white p-2 rounded-full shadow-sm">location_on</span>
+              <p class="font-headline text-lg md:text-xl font-bold">5741 Harrison Blvd, Ogden 84403</p>
+            </div>
+            <div class="flex items-center justify-center md:justify-start gap-4">
+              <span class="material-symbols-outlined text-primary bg-white p-2 rounded-full shadow-sm">call</span>
+              <a href="tel:+18016893222" class="phone-link font-headline text-lg md:text-xl font-bold hover:underline">
+                (801) 689-3222
+              </a>
+            </div>
+          </div>
+          <div class="pt-4">
+            <button
+              class="bg-primary text-on-primary px-8 py-4 font-bold text-sm uppercase tracking-widest hover:scale-105 transition-transform rounded-xl shadow-lg shadow-primary/20">Get
+              Directions</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-background w-full py-12 border-t border-outline-variant/10">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-8 px-6 md:px-12 max-w-7xl mx-auto">
+      <div class="flex flex-col items-center md:items-start gap-4">
+        <div class="font-headline font-bold text-lg text-[#6B5A60] uppercase tracking-tighter">ChouChou Tea
+        </div>
+        <p class="text-[10px] uppercase tracking-widest text-[#6B5A60]">© 2024 ChouChou Tea. Steeped in
+          playfulness.</p>
+      </div>
+      <div class="flex gap-8 text-[10px] uppercase tracking-widest text-[#6B5A60]/50">
+        <a class="hover:text-[#6B5A60] transition-colors" href="#">Privacy</a>
+        <a class="hover:text-[#6B5A60] transition-colors" href="#">Contact</a>
+        <a class="hover:text-[#6B5A60] transition-colors" href="#">Press</a>
+      </div>
+      <div class="flex gap-4">
+        <a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all"
+          href="#">
+          <span class="material-symbols-outlined text-lg">share</span>
+        </a>
+        <a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all"
+          href="#">
+          <span class="material-symbols-outlined text-lg">favorite</span>
+        </a>
+      </div>
+    </div>
+    <div class="text-center mt-8 opacity-40">
+      <p class="text-[10px] uppercase tracking-widest text-[#6B5A60]">5741 Harrison Blvd, Ogden 84403</p>
+    </div>
+  </footer>
+
+  <script>
+    const targetDate = new Date("April 25, 2026 10:00:00").getTime();
+
+    const daysEl = document.getElementById("days");
+    const hoursEl = document.getElementById("hours");
+    const minutesEl = document.getElementById("minutes");
+    const secondsEl = document.getElementById("seconds");
+    const labelEl = document.getElementById("countdown-label");
+
+    function pad(num) {
+      return String(num).padStart(2, "0");
+    }
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance <= 0) {
+        daysEl.textContent = "00";
+        hoursEl.textContent = "00";
+        minutesEl.textContent = "00";
+        secondsEl.textContent = "00";
+        if (labelEl) labelEl.textContent = "We're Open!";
+        clearInterval(timerInterval);
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((distance / (1000 * 60)) % 60);
+      const seconds = Math.floor((distance / 1000) % 60);
+
+      daysEl.textContent = pad(days);
+      hoursEl.textContent = pad(hours);
+      minutesEl.textContent = pad(minutes);
+      secondsEl.textContent = pad(seconds);
+    }
+
+    updateCountdown();
+    const timerInterval = setInterval(updateCountdown, 1000);
+
+    const calendarButton = document.getElementById("calendar-button");
+
+    if (calendarButton) {
+      calendarButton.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        const title = "ChouChou Tea Grand Opening";
+        const details = "Join us for the ChouChou Tea grand opening, giveaways, and launch promotions.";
+        const location = "5741 Harrison Blvd, Ogden 84403";
+        const startDate = "20260425T100000";
+        const endDate = "20260425T180000";
+
+        const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${startDate}/${endDate}&details=${encodeURIComponent(details)}&location=${encodeURIComponent(location)}`;
+
+        const icsContent = [
+          "BEGIN:VCALENDAR",
+          "VERSION:2.0",
+          "PRODID:-//ChouChou Tea//Grand Opening//EN",
+          "BEGIN:VEVENT",
+          `UID:${Date.now()}@chouchoutea.com`,
+          `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, "").split(".")[0]}Z`,
+          "DTSTART:20260425T100000",
+          "DTEND:20260425T180000",
+          `SUMMARY:${title}`,
+          `DESCRIPTION:${details}`,
+          `LOCATION:${location}`,
+          "END:VEVENT",
+          "END:VCALENDAR"
+        ].join("\r\n");
+
+        const blob = new Blob([icsContent], { type: "text/calendar;charset=utf-8" });
+        const icsUrl = URL.createObjectURL(blob);
+
+        const tempLink = document.createElement("a");
+        tempLink.href = icsUrl;
+        tempLink.download = "chouchou-tea-grand-opening.ics";
+        document.body.appendChild(tempLink);
+        tempLink.click();
+        document.body.removeChild(tempLink);
+
+        setTimeout(() => {
+          window.open(googleCalendarUrl, "_blank", "noopener,noreferrer");
+          URL.revokeObjectURL(icsUrl);
+        }, 300);
+      });
+    }
+  </script>
+</body>
+
+</html>
